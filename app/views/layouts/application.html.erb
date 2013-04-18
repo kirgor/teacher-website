@@ -2,13 +2,46 @@
 <html>
 <head>
   <title>Teacher</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+  <img src="/logo.jpg"/>
 
-<%= yield %>
+  <h1>Персональная страница</h1>
 
+  <h2>Учителя математики</h2>
+
+  <h2>Переверзевой Анастасии Викторовны</h2>
+
+  <div>
+    <% if admin? %>
+        <a href="/admin/logout">Выход</a>
+        <a href="/message/all">Все сообщения</a>
+    <% else %>
+        <a href="/admin/attempt">Вход для учителя</a>
+        <a href="/message/create">Написать сообщение</a>
+    <% end %>
+  </div>
+
+</header>
+<div id="menu">
+  <a href="/">Новости</a>
+  <a href="/homework/all">Домашнее задание</a>
+  <a href="/album/all">Фотоальбомы</a>
+  <a href="/news/my_class">Мой класс</a>
+  <a href="/about/me">Обо мне</a>
+  <a href="/about/school">О школе</a>
+  <a href="/about/contacts">Контакты</a>
+</div>
+<div id="content">
+  <%= yield %>
+</div>
+<footer>
+  <p>Полезные ссылки:</p>
+  <a href="http://ballov.net">ballov.net</a>
+</footer>
 </body>
 </html>

@@ -1,4 +1,4 @@
 class Album < ActiveRecord::Base
-  attr_accessible :datetime, :title
+  attr_accessible :title
   has_many :photos
 end

@@ -1,13 +1,116 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
+body {
+    background-color: #eaf4ff;
+    font-family: helvetica;
+}
+
+a {
+    color: black;
+}
+
+header, footer {
+    height: 200px;
+    background-color: #84d0e2;
+    position: relative;
+}
+
+footer {
+    height: 100px;
+    padding: 20px;
+}
+
+header > img {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 200px;
+    height: 170px;
+}
+
+header > h1, header > h2 {
+    position: relative;
+    left: 250px;
+    top: 30px;
+    width: 500px;
+}
+
+header > div {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    width: 200px;
+}
+
+header a {
+    display: block;
+}
+
+#menu {
+    float: left;
+    width: 200px;
+    height: 300px;
+    padding-left: 20px;
+    background-color: #afddea;
+}
+
+#menu > a {
+    display: block;
+    margin-top: 20px;
+}
+
+#content {
+    margin-left: auto;
+    min-height: 300px;
+    width: 600px;
+    margin-right: auto;
+    padding: 20px;
+}
+
+#content input {
+    display: block;
+    margin-top: 10px;
+}
+
+.button, input[type=submit] {
+    display: block;
+    width: 100px;
+    height: 18px;
+    border: 1px solid #1ebe9d;
+    background-color: #116d5d;
+    color: white;
+    font-size: 11px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.photo {
+    margin-top: 10px;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+#content input[type=text] {
+    width: 400px;
+}
+
+#content textarea {
+    display: block;
+    width: 400px;
+    height: 250px;
+    resize: none;
+}
+
+.item:not(:first-child) {
+    border-top: 1px solid darkgray;
+}
+
+.item {
+    padding: 10px;
+}
+
+.datetime {
+    font-size: 10px;
+}
+
+.item p {
+    margin: 0;
+}

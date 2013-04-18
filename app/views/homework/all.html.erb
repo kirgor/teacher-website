@@ -1,0 +1,8 @@
+<% @homeworks.each do |h| %>
+    <div class="item">
+      <a class="title" href="/homework/show/<%= h.id %>"><%= h.title %></a>
+    </div>
+<% end %>
+<% if admin? %>
+    <a class="button" href="/homework/add">Добавить</a>
+<% end %>

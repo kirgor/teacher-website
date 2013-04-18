@@ -1,0 +1,10 @@
+<h3><%= @homework.title %></h3>
+<div>
+  <% @homework.content.split("\r\n").each do |p| %>
+      <p><%= p %></p>
+  <% end %>
+</div>
+<% if admin? %>
+    <a class="button" href="/homework/edit/<%= @homework.id %>">Редактировать</a>
+    <a class="button" href="/homework/delete/<%= @homework.id %>">Удалить</a>
+<% end %>

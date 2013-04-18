@@ -1,0 +1,10 @@
+<h3><%= @album.title %></h3>
+<div>
+  <% @album.photos.each do |p| %>
+      <img class="photo" src="/photos/<%= p.id %>.jpg"/>
+  <% end %>
+</div>
+<% if admin? %>
+    <a class="button" href="/album/edit/<%= @album.id %>">Редактировать</a>
+    <a class="button" href="/album/delete/<%= @album.id %>">Удалить</a>
+<% end %>

@@ -1,10 +1,10 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: teacher_development
+  database: teacher
   pool: 5
-  username: teacher
-  password:
+  username: postgres
+  password: 123
 
 test:
   adapter: postgresql

@@ -1,0 +1,8 @@
+<% @albums.each do |a| %>
+    <div class="item">
+      <a class="title" href="/album/show/<%= a.id %>"><%= a.title %></a>
+    </div>
+<% end %>
+<% if admin? %>
+    <a class="button" href="/album/add">Добавить</a>
+<% end %>

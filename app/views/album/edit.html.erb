@@ -1,0 +1,17 @@
+<% if admin? %>
+    <form action="/album/save/<%= @album.id %>" method="post">
+      <input type="text" name="title" value="<%= @album.title %>"/>
+      <input type="submit" value="Сохранить"/>
+    </form>
+    <div>
+      <% @album.photos.each do |p| %>
+          <img class="photo" src="/photos/<%= p.id %>.jpg"/>
+          <a class="button" href="/photo/delete/<%= p.id %>">Удалить</a>
+      <% end %>
+    </div>
+    <form action="/photo/add" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="album_id" value="<%= @album.id %>"/>
+      <input type="file" name="file"/>
+      <input type="submit" value="Добавить фото"/>
+    </form>
+<% end %>

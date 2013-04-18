@@ -1,3 +1,3 @@
 class Homework < ActiveRecord::Base
-  attr_accessible :content
+  attr_accessible :title, :content
 end

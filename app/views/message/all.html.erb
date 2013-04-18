@@ -1,0 +1,11 @@
+<% if admin? %>
+    <% @messages.each do |m| %>
+        <div class="item">
+          <p class="datetime"><%= m.datetime.strftime('%d.%m.%Y') %></p>
+
+          <p><%= m.author %></p>
+
+          <p><%= m.content %></p>
+        </div>
+    <% end %>
+<% end %>

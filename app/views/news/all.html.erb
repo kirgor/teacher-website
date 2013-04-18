@@ -1,0 +1,13 @@
+<% @news.each do |n| %>
+    <div class="item">
+      <p class="datetime"><%= n.datetime.strftime('%d.%m.%Y') %></p>
+      <a class="title" href="/news/show/<%= n.id %>"><%= n.title %></a>
+    </div>
+<% end %>
+<% if admin? %>
+    <% if params[:action] == 'my_class' %>
+        <a class="button" href="/news/add?general=false">Добавить</a>
+    <% else %>
+        <a class="button" href="/news/add?general=true">Добавить</a>
+    <% end %>
+<% end %>
